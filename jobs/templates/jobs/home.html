@@ -2,12 +2,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <meta name="author" content="">
+    
+    <title>Daniel Bailey</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -34,15 +35,15 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Daniel Bailey</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Daniel Bailey</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link" href="http://twitter.com/daniel_a_bailey">Twitter</a>
+            <a class="nav-item nav-link" href="{% static 'resumefake.pdf' %}">Resume</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
             <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Secrets</a>
           </div>
         </div>
@@ -54,10 +55,11 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Dan</h1>
-      <p class="lead text-muted">My name is Daniel Bailey and I like building machines--hardware, software, mechanical and otherwise. I make new things, and I make old things work better.</p>
+      <p class="lead text-muted">My name is Daniel Bailey and I like machines</p>
       <p>
         <a href="mailto:Dan@codeBueno.com" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'myphoto.jpg' %}" height='250'/>
     </div>
   </section>
 
